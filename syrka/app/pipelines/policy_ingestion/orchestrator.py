@@ -139,7 +139,7 @@ class PolicyIngestionOrchestrator:
                 chunk_index=chunk_data['metadata']['chunk_index'],
                 content=chunk_data['content'],
                 embedding=embedding.tobytes(),
-                metadata=chunk_data['metadata']
+                chunk_metadata=chunk_data['metadata']
             )
 
             chunk_objects.append(chunk)

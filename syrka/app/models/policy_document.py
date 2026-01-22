@@ -49,7 +49,7 @@ class PolicyChunk(Base):
         chunk_index: Sequential index within document
         content: Chunk text content
         embedding: Vector embedding for similarity search
-        metadata: Additional JSON metadata (section, page, etc.)
+        chunk_metadata: Additional JSON metadata (section, page, etc.)
     """
 
     __tablename__ = "policy_chunks"
@@ -59,7 +59,7 @@ class PolicyChunk(Base):
     chunk_index = Column(Integer, nullable=False)
     content = Column(Text, nullable=False)
     embedding = Column(LargeBinary)  # Vector embedding stored as bytes
-    metadata = Column(JSON, default=dict, nullable=False)  # {"section": "...", "page": 5, etc.}
+    chunk_metadata = Column(JSON, default=dict, nullable=False)  # {"section": "...", "page": 5, etc.}
 
     # Relationship
     document = relationship("PolicyDocument", backref="chunks")

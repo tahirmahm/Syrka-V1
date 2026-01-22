@@ -116,7 +116,7 @@ CREATE TABLE policy_chunks (
     chunk_index INTEGER NOT NULL,
     content TEXT NOT NULL,
     embedding BYTEA,
-    metadata JSONB DEFAULT '{}'::jsonb
+    chunk_metadata JSONB DEFAULT '{}'::jsonb
 );
 
 CREATE INDEX idx_policy_chunks_document_id ON policy_chunks(document_id);
