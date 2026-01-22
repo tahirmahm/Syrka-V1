@@ -12,6 +12,8 @@ alembic==1.13.1
 pydantic==2.5.3
 pydantic-settings==2.1.0
 email-validator==2.1.0
+pydantic-core==2.14.6
+typing-extensions>=4.9.0
 
 # Authentication
 python-jose[cryptography]==3.3.0
@@ -24,11 +26,13 @@ httpx==0.26.0
 beautifulsoup4==4.12.3
 lxml==5.1.0
 
-# LangChain & LLM
-langchain==0.1.4
-langchain-openai==0.0.5
-langchain-community==0.0.16
-openai==1.10.0
+# LangChain & LLM (compatible with Pydantic v2 and Python 3.12)
+langchain>=0.1.10
+langchain-openai>=0.0.5
+langchain-community>=0.0.20
+langchain-core>=0.1.23
+openai>=1.10.0
+langsmith>=0.1.0
 
 # ML & Embeddings (M1 Mac compatible versions)
 sentence-transformers==2.3.1
