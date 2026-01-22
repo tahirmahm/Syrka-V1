@@ -39,6 +39,7 @@ class PolicyRAGChain:
         self.llm = ChatOpenAI(
             model=self.llm_model,
             api_key=settings.OPENAI_API_KEY,
+            base_url=settings.OPENAI_API_BASE,
             temperature=0.7
         )
 

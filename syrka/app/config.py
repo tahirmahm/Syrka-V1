@@ -27,9 +27,10 @@ class Settings(BaseSettings):
     ALGORITHM: str = "HS256"
     ACCESS_TOKEN_EXPIRE_MINUTES: int = 60
 
-    # OpenAI
+    # LLM API (OpenAI-compatible: OpenAI, DeepSeek, etc.)
     OPENAI_API_KEY: str
-    OPENAI_MODEL: str = "gpt-3.5-turbo"
+    OPENAI_API_BASE: str = "https://api.openai.com/v1"  # Change to https://api.deepseek.com for DeepSeek
+    OPENAI_MODEL: str = "gpt-3.5-turbo"  # Or deepseek-chat for DeepSeek
     OPENAI_EMBEDDING_MODEL: str = "text-embedding-ada-002"
 
     # HuggingFace
